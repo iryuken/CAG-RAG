@@ -172,11 +172,6 @@ All settings live in `config.py` and can be overridden via environment variables
 | Slow first query                     | Expected — model loads into RAM on first inference              |
 | LLaMA auth error                     | Run `huggingface-cli login` and accept model terms             |
 
----
-
-## License
-
-MIT
 
 ---
 
