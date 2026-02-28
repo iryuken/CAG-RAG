@@ -1,0 +1,25 @@
+# Velox — Elasticsearch for RAG
+# Start with:  docker compose up -d
+# Stop with:   docker compose down
+
+services:
+  elasticsearch:
+    image: elasticsearch:8.13.0
+    container_name: velox-es
+    ports:
+      - "9200:9200"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:9200 | grep -q 'tagline'"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  es_data:
+    driver: local

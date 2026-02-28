@@ -80,10 +80,10 @@ class CAGCache:
                 best_entry = entry
 
         if best_score >= threshold:
-            cprint(f"  [CAG] Cache HIT  (similarity={best_score:.3f})", "green")
+            print(f"  [CAG] Cache HIT (similarity={best_score:.3f})")
             return best_entry
 
-        cprint(f"  [CAG] Cache MISS (best similarity={best_score:.3f})", "yellow")
+        print(f"  [CAG] Cache MISS (best similarity={best_score:.3f})")
         return None
 
     def store(self, query: str, answer: str, chunks: list[str]):
@@ -103,7 +103,7 @@ class CAGCache:
                     :answer, :chunks, :created_at)
         """, asdict(entry))
         self.conn.commit()
-        cprint("  [CAG] Answer stored in cache.", "dim")
+        print("  [CAG] Answer stored in cache.")
 
     # ── Utilities ────────────────────────────────────────────────────────
 
