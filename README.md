@@ -1,4 +1,4 @@
-# Velox — Lightweight RAG + CAG System
+Lightweight RAG + CAG System
 
 A cost-efficient Q&A pipeline combining **Elasticsearch hybrid search** (RAG),
 **SQLite semantic caching** (CAG), and a **quantized 3B local LLM** — all
