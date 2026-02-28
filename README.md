@@ -4,8 +4,6 @@ A cost-efficient Q&A pipeline combining **Elasticsearch hybrid search** (RAG),
 **SQLite semantic caching** (CAG), and a **quantized 3B local LLM** — all
 running on an 8 GB RAM, CPU-only machine.
 
-> Built for the **Elastic Blogathon 2026**.
-
 ---
 
 ## Architecture
@@ -175,4 +173,4 @@ All settings live in `config.py` and can be overridden via environment variables
 
 ---
 
-> **Elastic Blogathon 2026** — Built with Elasticsearch, Sentence Transformers, and a 3B LLM.
+>  — Built with Elasticsearch, Sentence Transformers, and a 3B LLM.
